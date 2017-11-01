@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-zh"
+<html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -38,20 +38,94 @@
 <div class="row head">
     <div class="col-md-3 home-logo"><a href="/index/showIndex"><h1>冉盟</h1></a></div>
     <div class="col-md-6"></div>
-    <div class="col-md-1 mini-logo"><a href="#">登录</a></div>
-    <div class="col-md-1 mini-logo"><a href="#">博客</a></div>
-    <div class="col-md-1 mini-logo"><a href="#">朋友</a></div>
+    <div class="col-md-1 mini-logo"><a role="button" data-toggle="modal" data-target=".bs-example-modal-md" class="show-login">登录</a></div>
+    <div class="col-md-1 mini-logo"><a role="button" href="">博客</a></div>
+    <div class="col-md-1 mini-logo"><a role="button" href="">朋友</a></div>
 </div>
+
+<!--<a id="message_trigger_ok" href="#">成功</a>-->
+<!--<a id="message_trigger_err" href="#">错误</a>-->
+<!--<a href="#" data-trigger="collapse">打开关闭</a>-->
+<!--<div class="collapsible">-->
+<!--在哪呢？跑哪去了。。。。-->
+<!--</div>-->
+
 <div class="row body">
-    <a id="message_trigger_ok" href="#">成功</a>
-    <a id="message_trigger_err" href="#">错误</a>
-    <a href="#" data-trigger="collapse">打开关闭</a>
-    <div class="collapsible">
-        在哪呢？跑哪去了。。。。
-    </div>
+
 </div>
+
 <div class="row foot">
 
 </div>
+
+<!-- Small modal -->
+<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <div class="modal-header">
+                <h2>登录界面</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group has-feedback">
+                        <label for="exampleInputEmail1">用户名</label>
+                        <input type="text" class="form-control login-username" placeholder="用户名"/>
+                        <span class="glyphicon form-control-feedback login-username-message" aria-hidden="true"></span>
+                        <!--glyphicon-remove-->
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="exampleInputPassword1">密码</label>
+                        <input type="password" class="form-control login-password" placeholder="密码"/>
+                        <span class="glyphicon form-control-feedback login-password-message" aria-hidden="true"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p class="login-message" style="color:red"></p>
+                <button class="btn user-login">登录</button>
+                <a role="button" data-toggle="modal" data-target=".bs-example-modal-sm" data-dismiss="modal" aria-label="Close">注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <div class="modal-header">
+                <h2>注册界面</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">用户名</label>
+                        <input type="email" class="form-control" placeholder="用户名"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">密码</label>
+                        <input type="password" class="form-control" placeholder="密码"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">重复密码</label>
+                        <input type="password" class="form-control" placeholder="重复密码"/>
+                    </div>
+                    <div class="form-group">
+                        <label>手机号</label>
+                        <input type="text" class="form-control" placeholder="手机号"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn">注册</button>
+                <a role="button" data-toggle="modal" data-target=".bs-example-modal-md" data-dismiss="modal" aria-label="Close">登录</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
